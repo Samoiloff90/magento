@@ -1,5 +1,5 @@
 body
-  margin: 0;
+  margin: 0
   background-color: $background
   font-family: Arial, sans-serif
   overflow-x: hidden
@@ -50,6 +50,9 @@ body
     margin: 0px
     padding: 0 8px 13px 8px
     transition: all .2s
+    -webkit-box-shadow: 0px 43px 55px -35px $colorless
+    -moz-box-shadow: 0px 43px 55px -35px $colorless
+    box-shadow: 0px 43px 55px -35px $colorless
 .buy
   display: flex
   align-items: center
@@ -88,7 +91,6 @@ body
   color: $action
 .product:hover
   border-color: $action
-  box-shadow: 0px 7px 19px 2px $colorless
 .product:hover .buy__btn 
   background-color: $action
 .product:hover .product__description
