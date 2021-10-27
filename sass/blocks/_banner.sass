@@ -1,0 +1,74 @@
+* 
+	transition: all 0.2s
+
+.slider 
+  width: 80%
+  margin: 0 auto
+  margin-top: 100px
+
+.viewport
+  margin: 0 auto
+  max-width: 478px
+  position: relative
+  overflow: hidden
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -o-user-select: none
+  user-select: none
+  text-align: center
+
+
+.slidewrapper 
+  position: relative
+  width: calc(100% * 4)
+  -o-transition-timing-function: cubic-bezier(.67, .01, .23, 1)
+  left: 0
+  top: 0
+  margin: 0
+  padding: 0
+  -webkit-transition: 0.6s
+  -o-transition: 0.6s
+  transition: 0.6s
+  -webkit-transition-timing-function: ease-in-out
+  -o-transition-timing-function: ease-in-out
+  transition-timing-function: ease-in-out
+
+
+.slidewrapper,
+.slidewrapper ul,
+.slidewrapper li 
+  margin: 0
+  padding: 0
+
+.slide 
+  width: calc(100%/4)
+  list-style: none
+  display: inline
+  float: left
+
+.slide__img
+  width: 100%
+
+.arrows__prev,
+.arrows__next 
+  position: absolute
+  width: 38px
+  height: 38px
+  background-color: $main-color
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  border-radius: 5px
+  top: calc(88% - 25px)
+
+.arrows__prev:hover,
+.arrows__next:hover 
+  cursor: pointer
+
+.arrows__prev 
+  left: 2%
+
+.arrows__next
+  right: 2%

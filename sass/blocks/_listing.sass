@@ -1,0 +1,109 @@
+body
+  margin: 0
+  background-color: $background
+  font-family: Arial, sans-serif
+  overflow-x: hidden
+.store
+  width: 480px
+  margin: auto
+  display: grid
+  grid-template-columns: repeat(3, 160px)
+  justify-content: space-between
+  background-color: $light-color
+  padding: 40px 0
+.product
+  width: 138px
+  display: grid
+  // grid-template-rows: 145px 1fr 1fr 1fr
+  grid-template-rows: 145px 69px 20px 50px
+  border: 3px solid transparent
+  border-bottom: 0
+  transition: all .2s
+  padding: 10px 8px 0 8px
+  position: relative
+  margin-bottom: 5px
+  margin-right: -3px
+  &__name
+    font-size: 13px
+    font-weight: 400
+    line-height: 16px
+    margin: 0px
+  &__rating
+    color: $main-color
+    padding: 0 10px
+    font-size: 13px
+    letter-spacing: -1px
+  &__description
+    position: absolute
+    z-index: 9999
+    top: 100%
+    left: -3px
+    width: 138px
+    font-size: 11px
+    line-height: 14px
+    color: $descr-color
+    visibility: hidden
+    opacity: 0
+    background-color: $light-color
+    border: 3px solid transparent
+    border-top: 0
+    margin: 0px
+    padding: 0 8px 13px 8px
+    transition: all .2s
+    -webkit-box-shadow: 0px 43px 55px -35px $colorless
+    -moz-box-shadow: 0px 43px 55px -35px $colorless
+    box-shadow: 0px 43px 55px -35px $colorless
+.buy
+  display: flex
+  align-items: center
+  margin-bottom: 19px
+  max-width: 132px
+  &__price
+    margin: 6px 15px 0px 0px
+    color: $main-color
+    font-size: 18px
+    font-weight: 600
+    &-currency
+      font-size: 13px
+    &-cent
+      font-size: 12px
+  &__btn
+    min-width: 74px
+    min-height: 30px
+    color: $light-color
+    font-size: 12px
+    text-align: center
+    margin: 10px 0px 0px 0px
+    padding: 0
+    border: none
+    cursor: pointer
+    outline: none
+    background-color: $main-color
+.rating-wrap
+  display: flex
+  align-items: center
+.stick
+  height: 1px
+  flex-grow: 1
+  background-color: $stick
+// Hover
+.product:hover .product__rating-star
+  color: $action
+.product:hover
+  border-color: $action
+.product:hover .buy__btn 
+  background-color: $action
+.product:hover .product__description
+  border-color: $action
+  visibility: visible
+  opacity: 1
+/* media queries */
+@media screen and (max-width: 576px)
+  .store
+    grid-template-columns: repeat(2, 160px)
+    justify-content: space-evenly
+@media screen and (max-width: 415px)
+  .store
+    grid-template-columns: repeat(1, 160px)
+    justify-content: space-evenly
+    width: 100%
